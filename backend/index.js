@@ -9,7 +9,8 @@ const AuthRoutes = require('./routes/AuthRoutes')
 const PORT = process.env.PORT || 3000
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://hm-website-frontend.vercel.app/',
+    methods: ['GET', 'POST'],
     credentials: true,
 }))
 app.use(express.json())
