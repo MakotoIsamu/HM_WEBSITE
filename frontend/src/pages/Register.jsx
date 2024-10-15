@@ -13,6 +13,8 @@ const Register = () => {
             fullName,
             email,
             password,
+        } , {
+            withCredentials: true
         })
         const data = await response.data()
         alert(data.message)
