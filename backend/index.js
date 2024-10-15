@@ -40,7 +40,8 @@ app.get('/', (req, res) => {
     res.send('Api is running')
 })
 
-app.use('/auth', AuthRoutes)
+app.options('/auth/register', cors());
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`)
